@@ -10,18 +10,25 @@ will speak instead of just popping up messages.
 
 How to install:
 
-1) Download and install nodejs on your machine.You can download node from https://nodejs.org/en/download/ .
-2) Install and Configure the  npm http server  to run nodejs on local host.
-               - To install http server with npm write the folowing code on your terminal.\
+ 1) Download and install nodejs on your machine.You can download node from https://nodejs.org/en/download/ .
+ 2) Install and Configure the  npm http server  to run nodejs on local host.
+ 3) To install http server with npm write the folowing code on your terminal.\
                  
-                  npm install http-server -g
+                   npm install http-server -g
                   
-               - To run the http server for node , execute the following code on terminal.
+ 4)To run the http server for node , execute the following code on terminal.
                
-                  http-server
-               - Then, run the given ip address on the browser.
+                   http-server
+                  
+ 5)Then, run the given ip address on the browser.
+                   
+                   http://127.0.0.1:8080
+                   http://172.16.2.110:8080
+              
                
 
 version 1.0:
-This interface only recognises speech and converts it into text.The next version would have more additional features and user friendly interface.
+This interface only recognises speech and converts it into text.The next version would have more additional features and user friendly interface.It uses google speech api to convert speech into text.Transcripts in different languages can be done by changing the script accordingnly. To read more about the language support by google speech API.Please refer https://cloud.google.com/speech/docs/languages
+
+The advanced version would involve concepts of machine learning to summarize the text and form reports that could be stored to google cloud.This version would use machine learning modles of tensorflow.
 
