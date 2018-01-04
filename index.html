@@ -8,7 +8,7 @@
       font-size: 22px;
     }
     .button {
-    background-color: red; /* Green */
+    background-color: red; 
     border: none;
     color: white;
     padding: 20px;
@@ -16,30 +16,49 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 2px 2px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 60%;
+
+    position:relative;
+    transition: .5s ease;
+    top: 0px;
+    left: 0px;
+    right: 100px;
+    bottom: 191px;
+    }
+    hr {
+      color: blue;
     }
       
 
   </style>
   <script src="myspeechscript.js"></script>
+  <script src="savefile.js"></script>
 </head>
   <body>
     
     
     
-    <span id="speech" style="color:red;">Start</span>
-    <span id="interim" >Speaking</span>
+    <span id="speech" style="color:red;">Start Speaking!</span>
+    <span id="interim" >You will see live transcription here :)</span>
    
   
 
 	 <br><br><br><br>
    
-   <textarea rows="10" cols="100" id="op" style="color:green;font-family: monospace; font-size: 22px;"></textarea>
+   <textarea rows="10" cols="80" id="op" style="color:green;font-family: monospace; font-size: 22px;"></textarea>
+   <input type="button" value="Start" onclick="startlistening()" align="bottom" class="button"/>
+   
    <br><br><br>
 
-	<input type="button" value="Start" onclick="startlistening()" align="bottom" class="button"/>
+	
+  <hr style="background-color:blue; height: 3px;" width="100%">
+  <br><br>
+  <span style="color:red;font-family: monospace;font-size: 20px">Download what you just spoke,</span><span style="color:blue;font-family: monospace;font-size: 20px"> use the strentgh of your voice</span> <span style="color:red;font-family: monospace;fpx">:)</span>
+  <br><br>
+  Enter file name: <input id="inputFileNameToSaveAs"></input>
+  <button onclick="saveTextAsFile()" style="font-size: 16px;background-color: blue;text-align: center; color:white;">Save Text to File</button>
   </body>
   
    
