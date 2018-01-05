@@ -1,3 +1,7 @@
+// This script saves the content in the textarea and downloads it as a text file to collect data
+// Written By : Rajan Sharma
+
+
 function saveTextAsFile()
 {
     var textToSave = document.getElementById("op").value;
