@@ -1,4 +1,8 @@
- function upgrade() {
+// Script that uses google speech api to transform speech to text
+// read google webkitSpeechRecognition documentation for more Knowledge
+// Written by : Rajan Sharma 
+
+function upgrade() {
       alert('Please use Google Chrome for best experience');
     }
 
@@ -15,8 +19,6 @@
 
         function reset() {
           recognizing = false;
-          //interim_span.innerHTML = '';
-          //transcription.innerHTML = '';
           speech.start();
         }
 
@@ -24,8 +26,8 @@
 
         speech.continuous = true;
         speech.interimResults = true;
-        speech.lang = 'en-US'; // check google web speech example source for more lanuages
-        speech.start(); //enables recognition on default
+        speech.lang = 'en-US'; // you can change the desired supported languages by google
+        speech.start(); // starts listening by default
 
         speech.onstart = function() {
             // When recognition begins
@@ -33,11 +35,11 @@
         };
 
         speech.onresult = function(event) {
-          // When recognition produces result
+          //  recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
 
-          // main for loop for final and interim results
+          // for loop for final and intermediate results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
@@ -47,18 +49,18 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-		  var a=transcription.innerHTML;
-			var b=document.getElementById('op').value;
-			document.getElementById('op').value=b+a;
+          var a=transcription.innerHTML;
+	  var b=document.getElementById('op').value;
+	  document.getElementById('op').value=b+a;
         };
 
         speech.onerror = function(event) {
-            // Either 'No-speech' or 'Network connection error'
+            // Revokes when there is no speech or no internet connection
             console.error(event.error);
         };
 
         speech.onend = function() {
-            // When recognition ends
+            //recognition ends
 			
             reset();
         };
