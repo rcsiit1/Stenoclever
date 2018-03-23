@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
     'use strict';
     require.config({
         paths: {
-            echarts: "js/echarts/"
+            echarts: "../assets/echarts"
         }
     }), require(["echarts", "echarts/chart/bar", "echarts/chart/chord", "echarts/chart/eventRiver", "echarts/chart/force", "echarts/chart/funnel", "echarts/chart/gauge", "echarts/chart/heatmap", "echarts/chart/k", "echarts/chart/line", "echarts/chart/map", "echarts/chart/pie", "echarts/chart/radar", "echarts/chart/scatter", "echarts/chart/tree", "echarts/chart/treemap", "echarts/chart/venn", "echarts/chart/wordCloud"], function(a) {
         var b = a.init(document.getElementById("echarts_bar"));

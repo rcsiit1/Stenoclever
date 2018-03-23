@@ -41,14 +41,12 @@ var App = function() {
     /*************** Change theme color *************/
     var handleColorSetting = function() {
 
-    	jQuery( ".control-sidebar-btn" ).click(function() {
-    		
+    	$(document).on('click', '.control-sidebar-btn', function () {
     		jQuery( ".quick-setting" ).toggle( "slide");
-    		
     	});
 
     };
-    
+
     /************* Handle theme layout ****************/
     var handleTheme = function() {
 
@@ -501,9 +499,21 @@ var App = function() {
 
     // Handles quick sidebar toggler
     var handleQuickSidebarToggler = function() {
-        // quick sidebar toggler
-        $(document).on('click', '.dropdown-quick-sidebar-toggler a, .chat-sidebar-toggler, .quick-sidebar-toggler', function(e) {
+        // close sidebar using button click
+        $(document).on('click', '.dropdown-quick-sidebar-toggler a', function(e) {
             $('body').toggleClass('chat-sidebar-open');
+        });
+        // close sidebar when click outside box
+        $(document).on('click', '.page-content', function(e) {
+        	if($("body").hasClass("chat-sidebar-open")){
+        			$('body').toggleClass('chat-sidebar-open');
+        	}
+        });
+        // close sidebar using esc key
+        $( document ).on( 'keydown', function ( e ) {
+            if ( e.keyCode === 27 && $("body").hasClass("chat-sidebar-open")) { // ESC
+            	$('body').toggleClass('chat-sidebar-open');
+            }
         });
     };
 
@@ -529,7 +539,7 @@ var App = function() {
             chatMessagesHeight -= wrapperChat.find(".page-quick-sidemenu").outerHeight(true);
             // user chat messages 
             chatMessages.attr("data-height", chatMessagesHeight);
-            chatMessages.css("height", "550px");
+            chatMessages.css("height", chatMessagesHeight);
             chatMessages.css("overflow-y", "auto");
         };
 
@@ -565,7 +575,7 @@ var App = function() {
             var preparePost = function(dir, time, name, avatar, message) {
                 var tpl = '';
                 tpl += '<div class="post ' + dir + '">';
-                tpl += '<img class="avatar" alt="" src="' + Layout.getLayoutImgPath() + avatar + '.svg"/>';
+                tpl += '<img class="avatar" alt="" src="' + Layout.getLayoutImgPath() + avatar + '.jpg"/>';
                 tpl += '<div class="message">';
                 tpl += '<span class="arrow"></span>';
                 tpl += '<a href="#" class="name">' + name + '</a>&nbsp;';
@@ -576,7 +586,8 @@ var App = function() {
                 tpl += '</div>';
                 tpl += '</div>';
                 $(".chat-sidebar-chat-user-messages").animate({
-                    scrollTop: $('.chat-sidebar-chat-user-messages').height()
+                    //scrollTop: $('.chat-sidebar-chat-user-messages').height()
+                scrollTop: $(document).height()
                 }, 1000);
                 return tpl;
             };
@@ -596,7 +607,7 @@ var App = function() {
                 var message = preparePost('in', (time.getHours() + ':' + time.getMinutes()), "Johnson Smith", 'doc/doc5', 'Lorem ipsum doloriam nibh...');
                 message = $(message);
                 chatContainer.append(message);
-            }, 3000);
+            }, 2000);
         };
 
         wrapperChat.find('.chat-sidebar-chat-user-form .btn').on('click', handleChatMessagePost);
@@ -668,9 +679,9 @@ var App = function() {
             //Core handlers
             handleInit(); // initialize core variables
             handleTheme();
-            handleOnResize(); // set and handle responsive
+            handleOnResize(); // set and handle responsive    
             handleColorSetting();
-
+            
             //UI Component handlers     
             handleBootstrapSwitch(); // handle bootstrap switch plugin
             handleSelect2(); // handle custom Select2 dropdowns
@@ -827,4 +838,7 @@ var App = function() {
 
 jQuery(document).ready(function() {
     App.init(); // init core componets
+    $(".chat-sidebar-chat-user-messages").animate({
+        scrollTop: $(document).height()
+    }, 1000);
 });
