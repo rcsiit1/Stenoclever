@@ -156,8 +156,7 @@
 
         // optionally set height to the parent's height
         o.height = (o.height == 'auto') ? me.parent().height() : o.height;
-        //o.height = o.height - 20;
-        //alert(o.height);
+
         // wrap content
         var wrapper = $(divS)
           .addClass(o.wrapperClass)
@@ -165,14 +164,14 @@
             position: 'relative',
             overflow: 'hidden',
             width: o.width,
-            height: o.height - 20
+            height: o.height
           });
 
         // update style for the div
         me.css({
           overflow: 'hidden',
           width: o.width,
-          height: o.height - 20
+          height: o.height
         });
 
         // create scrollbar rail

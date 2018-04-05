@@ -532,7 +532,7 @@ li [class^=icon-].icon-large {
 	display: none!important;
 }
 .img-circle {
-    border-radius: 90%;
+    border-radius: 50%;
 }
 .pull-right {
     float: right!important;
@@ -571,8 +571,8 @@ body {
     float: left;
     display: block;
     width: 235px;
-    height: 70px;
-    padding: 15px 20px 10px 20px;
+    height: 60px;
+    padding: 10px 20px 0px 30px;
     background: #222c3c;
 }
 .logo-icon{
@@ -799,6 +799,10 @@ body {
 .page-header.navbar .hor-menu .navbar-nav>li .dropdown-menu li.current>a>i {
     color: #f1f3f6;
 }
+.page-header-inner {
+    float: left;
+    width: 100%;
+}
 .page-header.navbar .hor-menu .navbar-nav>li .dropdown-menu li.divider {
     background-color: #495c72;
 }
@@ -910,6 +914,11 @@ body {
 }
 .navbar-custom {
     background: #f1efef;
+    float: left;
+    width: 100%;
+}
+.navbar-nav .dropdown-menu{
+	position: absolute;
 }
 .page-header.navbar.navbar-fixed-top,
 .page-header.navbar.navbar-static-top {
@@ -940,9 +949,10 @@ body {
     color: #fff;
     font-size: 25px;
 }
-.navbar-nav>li>a {
+.navbar-nav>li>a,
+.navbar-nav>li>a.sidebar-toggler {
     padding: 20px 10px 20px 15px;
-    line-height: 24px;
+    line-height: 20px;
 }
 .page-header.navbar .search-form {
     display: inline-block;
@@ -991,9 +1001,26 @@ body {
 .page-header.navbar .search-form.open .input-group .input-group-btn .btn.submit {
     margin-left: 0
 }
-
-
-
+form.search-form-opened {
+    float: left;
+    width: 100%;
+    max-width: 200px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 30px;
+    margin: 10px 0 0 10px;
+    border: 1px solid #bdbdbd;
+}
+form.search-form-opened .btn.submit {
+    margin: 0;
+    color: #1E2629;
+}
+.search-form-opened input[type="text"] {
+    background-color: transparent;
+    border: 0;
+    color: #1E2629;
+    padding: 7px 12px;
+}
 .page-header.navbar .menu-toggler {
     cursor: pointer;
     opacity: .7;
@@ -1312,12 +1339,12 @@ body {
     margin: 8px 0 2px
 }
 .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {
-    padding: 24px 10px 12px 8px
+    padding: 13px 6px 12px 8px
 }
 .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle>.username {
     display: inline-block;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 300
 }
 .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle>img {
     float: left;
@@ -1335,8 +1362,8 @@ body {
     width: 175px
 }
 .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-menu>li>a {
-    font-size: 16px;
-    font-weight: 400
+    font-size: 14px;
+    font-weight: 300
 }
 .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-menu>li>a i {
     width: 15px;
@@ -1396,7 +1423,8 @@ body {
 }
 .page-header.navbar .hor-menu .navbar-nav>li.mega-menu-dropdown>.dropdown-menu {
     left: auto;
-    width: auto
+    width: auto;
+    position: absolute;
 }
 .page-header.navbar .hor-menu .navbar-nav>li.mega-menu-dropdown>.dropdown-menu .mega-menu-content {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -3094,12 +3122,12 @@ textarea.form-control-textarea {
     background: #fff;
     z-index: 1000;
     position: inherit;
-    border: 2px solid rgba(52, 73, 94, 0.44);
+    border: 1px solid rgba(52, 73, 94, 0.44);
     padding: 2px;
 }
 .txtOnline {
     color: #ccc;
-    font-size: 12px;
+    font-size: 11px;
 }
 .user-panel .image img {
     max-width: 100%;
@@ -4108,7 +4136,7 @@ body[ng-controller] .modal {
     font-size: 24px;
 }
 .card-body {
-    padding: 10px 24px 24px 24px;
+    padding: 1px 20px 15px 12px;
     position: relative;
 }
 .card-body:before,
@@ -5819,7 +5847,10 @@ h6 .label {
     height: 20px;
     float: right;
 }
-
+.sidemenu-closed .label-menu {
+	margin-right: -5px;
+	margin-top: -5px;
+}
 .label.label-sm {
     font-size: 10px;
     font-weight: 600;

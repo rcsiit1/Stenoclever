@@ -1,0 +1,186 @@
+
+	
+    
+    <!-- google font, tether, bootstrap, jquery and other files-->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.min.js" ></script>
+	<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link href="js/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/css/tether.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.js" ></script>
+	<link href="js/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="js/select2/css/select2.css" rel="stylesheet" type="text/css" />
+	<link href="js/dropzone/dropzone.css" rel="stylesheet" media="screen">
+	<link href="js/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="js/material/material.min.css">
+    <!-- theme style -->
+   <link href="css/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
+   <link href="css/style.css" rel="stylesheet" type="text/css" />
+   <link href="css/plugins.min.css" rel="stylesheet" type="text/css" />
+   <link href="css/formlayout.css" rel="stylesheet" type="text/css" />
+    <link href="css/inbox.min.css" rel="stylesheet" type="text/css" />
+   <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+   <link href="css/theme-color.css" rel="stylesheet" type="text/css" />
+   
+   <link href="css/material_style.css" rel="stylesheet" type="text/css" />
+   <link href="css/material.indigo-pink.min.css" rel="stylesheet" type="text/css" />
+   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- favicon -->
+<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+	
+
+			
+
+<!-- start page content -->
+               {% block content %}
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+                            <div class=" pull-left">
+                                <div class="page-title">Record an Old Case</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  <div class="inbox">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-topline-gray">
+                                <div class="card-body no-padding height-9">
+									<div class="row">
+			                            <div class="col-md-9">
+			                                <div class="inbox-body">
+			                                    
+			                                    <div class="inbox-body no-pad">
+			                                        <section class="mail-list">
+			                                            <div class="mail-sender">
+														<div class="form-group">
+	                                                        <label>Patient Name</label>
+	                                                           <input type="text" class="form-control" placeholder="Name">
+	                                                     </div>
+			                                            	<div class="form-group">
+                                                              <label>Date</label>
+                                                              <div class="input-group date form_date col-md-12" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                              <input class="form-control" size="16" type="text" value="">
+                                                              <span class="input-group-addon"><span class="fa fa-remove"></span></span>
+                                                                 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                            </div>
+                                                                <input type="hidden" id="dtp_input2" value="" />
+                                                             <br/>
+                                                            </div>
+															<div class="form-group">
+	                                                        <label>Age</label>
+	                                                           <input type="number" class="form-control" placeholder="age">
+	                                                     </div>	
+															<div class="form-group">
+	                                                        <label>Patient Id</label>
+	                                                           <input type="number" class="form-control" placeholder="Id">
+	                                                     </div>
+																
+														</div>
+			                                            <div class="view-mail">
+			                                                
+			                                            </div>
+			                                            
+			                                            <div class="compose-btn pull-left" style="width:100%;padding-left:3%;padding-right:3%">
+														<div class="form-group">
+                                                         <label>Textarea</label>
+                                                           <textarea class="form-control" rows=""placeholder="Enter ..." style="height:200px"></textarea>
+														   
+                                                        </div>
+												<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect margin-right-10 btn-danger"style="float:right;margin:10px">
+												  <i class="material-icons">S</i>
+												</button>
+												<div style="width:100%;height:80px">
+														<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect margin-right-10 btn-primary"style="float:right;margin:10px">
+												  <i class="material-icons">S</i>
+												</button>
+												</div>
+												
+														 <div class="form-group">
+	                                                        <label>Diseases</label>
+	                                                           <input type="text" class="form-control" placeholder="">
+	                                                     </div>
+														 <div class="form-group">
+                                                         <label>Symptoms Detected</label>
+                                                           <textarea class="form-control" rows=""placeholder="Enter ..." style="height:80px"></textarea>
+														   
+                                                        </div>
+			                                                <a href="email_compose.html" class="btn btn-sm btn-primary">Submit</a>
+			                                               <a class="btn btn-sm btn-primary">Prescribe</a>   
+			                                            </div>
+			                                        </section>
+			                                    </div>
+			                                </div>
+			                            </div>
+										<!-- start page content-->
+			                            <div class="col-md-3">
+			                                <div class="inbox-sidebar">
+			                                    <a data-title="Compose" class="btn red compose-btn btn-block m-0">
+			                                        <i class="fa fa-edit"></i>Prescription </a>
+			                                    
+			                                    <ul class="nav nav-pills nav-stacked labels-info inbox-divider">
+			                                        <li>
+			                                            <h4>Content 1</h4>
+			                                        </li>
+			                                        
+			                                    </ul>
+			                                    <ul class="nav nav-pills nav-stacked labels-info inbox-divider ">
+			                                        <li>
+			                                            <h4>Content 2</h4>
+			                                        </li>
+			                                        
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            
+                        </div>
+                    </div>
+                
+            <!-- end page content -->
+            
+        </div>
+		{% endblock%}
+        <!-- end page container -->
+		
+    
+<!-- Loading script files -->
+
+<script src="js/jquery.blockui.min.js" ></script>
+<script src="js/jquery.slimscroll.js" ></script>
+<script src="js/popper/popper.js" ></script>
+<script src="js/jquery-validation/js/jquery.validate.min.js" ></script>
+ <script src="js/jquery-validation/js/additional-methods.min.js" ></script>
+
+<!--Bootstrap -->
+<script src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch/js/bootstrap-switch.min.js" ></script>
+	<script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"  charset="UTF-8"></script>
+    <script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker-init.js"  charset="UTF-8"></script>
+<!-- Common js-->
+<script src="js/app.js" ></script>	
+<script src="js/form-validation.js" ></script>
+<script src="js/layout.js" ></script>
+<script src="js/theme-color.js" ></script>
+
+<!-- Material -->
+<script src="js/material/material.min.js" ></script>
+<script src="js/getmdl-select.js" ></script>
+<script src="js/material-datetimepicker/moment-with-locales.min.js" ></script>
+<script src="js/material-datetimepicker/bootstrap-material-datetimepicker.js" ></script>
+<script src="js/material-datetimepicker/datetimepicker.js" ></script>
+<script src="js/select2/js/select2.js" ></script>
+<script src="js/select2/js/select2-init.js" ></script>
+
+<!-- dropzone -->
+
+<script src="js/dropzone/dropzone.js" ></script>
+<script src="js/dropzone/dropzone-call.js" ></script>
+
+

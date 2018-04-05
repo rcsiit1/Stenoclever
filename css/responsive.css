@@ -1,5 +1,12 @@
 @charset "ISO-8859-1";
+/*
+ *  Document   : responsive.css
+ *  Author     : RedStar Theme
+ *  Description: A common stylesheet for responsive layout
+ */
 
+
+/* MEDIA QUERIES */
 
 
 @media (max-width:768px) {
@@ -1164,6 +1171,9 @@
 	.page-boxed .container {
 	    width: 1370px;
 	    max-width: 100%;
+	}
+	.page-boxed .page-header-inner.container {
+	    display: block;
 	}
 }
 @media print {
