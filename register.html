@@ -14,6 +14,12 @@
      <link href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/css/tether.min.css" rel="stylesheet" type="text/css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.js" ></script>
 	 <script src="js/jquery.min.js"></script>
+	 
+	 <link href="js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	   <link href="css/formlayout.css" rel="stylesheet" type="text/css" />
+	    <link href="css/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/plugins.min.css" rel="stylesheet" type="text/css" />
  <link href="js/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
     <link href="js/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
     <link href="js/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
@@ -24,12 +30,18 @@
   <link href="css/font-awesome.min 1.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/admin.css" rel="stylesheet">
+  
 </head>
 
 <body class="bg-dark">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Register an Account</div>
+	
+	<img class="card-img-top" src="img/invoice_logo.png" alt="Card image cap">
+	      
+		 
+		  
+      <div class="card-header" style="text-align:center">Register an Account</div>
       <div class="card-body">
         <form>
           <div class="form-group">
@@ -61,7 +73,7 @@
 			  <div class="col-md-6" style="padding-top:10px">
                 <label>Phone No.</label>
 			  <div class="form-group row">
-                                            <div class="col-sm-10">
+                                            <div class="col-sm-12">
                                                 <input type="text" placeholder="Number" data-mask="(999) 999-9999" class="form-control">
                                                
                                             </div>
@@ -75,15 +87,16 @@
 			  <div class="col-md-6" style="padding-top:10px">
                 <label>Date Of Birth</label>
 				<div class="form-group row">
-                                           
-                                            <div class="col-sm-10">
-                                                <input type="text" placeholder="" data-mask="99/99/9999" class="form-control">
-                                               
+                                            
+                                            <div class="input-group date form_date col-md-12" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="6" type="text" value="">
+                                                
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
                                             </div>
+                                            <input type="hidden" id="dtp_input2" value="" />
+                                            <br/>
                                         </div>
-				
-					
-              </div>
+				</div>
 		 <div class="col-md-6">
                 <label>Specialization</label>
                 <input class="form-control"type="text" placeholder="Specialization">
@@ -215,7 +228,9 @@
       </div>
     </div>
   </div>
-  
+   <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"  charset="UTF-8"></script>
+    <script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker-init.js"  charset="UTF-8"></script>
  <script src="js/jquery.min 1.js"></script>
  <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
