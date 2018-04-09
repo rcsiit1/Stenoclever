@@ -14,19 +14,41 @@
   <link href="css/font-awesome.min 1.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/admin.css" rel="stylesheet">
+ 
+  <style>
+  .container{
+        min-width:100%!important;
+		position:absolute;
+		}
+	.cen{
+		margin-top:80px;
+	}
+		
+	
+  </style>
+     
 </head>
 
 <body class="bg-dark">
-  <div class="container">
-    <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Login</div>
-      <div class="card-body">
+
+<div class="container" style="width:100%">
+  <div class="row window_h">
+    <div class="col" style="background:#6673FC;">
+	<img src="img/" alt="Card image cap">
+      <p style="color:#FFFFFF;"></p>
+    </div>
+    <div class="col">
+    
+	
+	<div class="cen">
+	     <h1 style="text-align:center";"margin-top:50px">Join Steno today</h1>
         <form>
+		
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail1">Enter Your E-mail</label>
             <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
           </div>
-          <div class="form-group">
+          <div class="form-group" style="padding-top:10px">
             <label for="exampleInputPassword1">Password</label>
             <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
           </div>
@@ -34,18 +56,64 @@
             <div class="form-check">
               <label class="form-check-label">
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
+				
             </div>
           </div>
+		 
           <a class="btn btn-primary btn-block" href="index.html">Login</a>
         </form>
         <div class="text-center">
+          <a class=" d-block large regest" style="padding-top:10px" href="register.html">Register your Account</a>
+		  <a class="d-block large" href="forgot-password.html" >Forgot Password?</a>
+          
+			</div>
+			</div>
+    
+	
+	
+	<!--forgot password-->
+	
+	<div class="card card-login mx-auto mt-5 forgets" style="display:none">
+      <div class="card-header">Reset Password</div>
+      <div class="card-body">
+        <div class="text-center mt-4 mb-5">
+          <h4>Forgot your password?</h4>
+          <p>Enter your email address and we will send you instructions on how to reset your password.</p>
+        </div>
+        <form>
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email address">
+          </div>
+          <a class="btn btn-primary btn-block" href="login.html">Reset Password</a>
+        </form>
+        <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+          <a class="d-block small" href="login.html">Login Page</a>
         </div>
       </div>
     </div>
+	
+    
   </div>
+  </div>
+
   <!-- Bootstrap core JavaScript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+     $(document).ready(function(){
+		$(".window_h").height( $(document).height());
+	
+		
+		$(".regest").click(function(){
+			$(".loginn").hide();
+			$(".regets").show();
+		});
+	
+		
+		
+});
+  </script>
+  
   <script src="js/jquery.min 1.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- Core plugin JavaScript-->
