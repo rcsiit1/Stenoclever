@@ -1,35 +1,48 @@
 
-			<!-- start page content -->
+
+<!-- start page content -->
 			{% block content %}
-			
-			<!-- google font, tether, bootstrap, jquery and other files-->
+	<!-- icons -->
+    <link href="js/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- google font, tether, bootstrap, jquery and other files-->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
 	<script src="js/jquery.min.js" ></script>
 	<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+    
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/css/tether.min.css" rel="stylesheet" type="text/css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.js" ></script>
 	<link href="js/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="js/select2/css/select2.css" rel="stylesheet" type="text/css" />
 	<link href="js/dropzone/dropzone.css" rel="stylesheet" media="screen">
 	<link href="js/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+	 <link href="js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="js/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
     <link href="js/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="js/material/material.min.css">
     <!-- theme style -->
    <link href="css/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
    <link href="css/style.css" rel="stylesheet" type="text/css" />
    <link href="css/plugins.min.css" rel="stylesheet" type="text/css" />
    <link href="css/formlayout.css" rel="stylesheet" type="text/css" />
+    <link href="css/inbox.min.css" rel="stylesheet" type="text/css" />
    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
    <link href="css/theme-color.css" rel="stylesheet" type="text/css" />
+   
    <link href="css/material_style.css" rel="stylesheet" type="text/css" />
    <link href="css/material.indigo-pink.min.css" rel="stylesheet" type="text/css" />
    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <!-- favicon -->
-	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+	
+
+
+       
 			
 			
-			  <div class="page-content-wrapper">
+            <div class="page-content-wrapper">
                 <div class="page-content">
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
@@ -51,7 +64,6 @@
                                 <div class="card-head">
                                     <header>Basic Information</header>
                                      
-				                           
                                 </div>
                                 <div class="card-body" id="bar-parent">
                                     <form action="#" id="form_sample_1" class="form-horizontal">
@@ -61,63 +73,32 @@
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="firstname" data-required="1" placeholder="enter first name" value="Lalit" class="form-control input-height" /> </div>
+                                                    <input type="text" name="firstname" data-required="1"  class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Last Name
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="lastname" data-required="1" placeholder="enter last name" value="Joshi" class="form-control input-height" /> </div>
+                                                    <input type="text" name="lastname" data-required="1"  class="form-control input-height" /> </div>
                                             </div>
+                                            
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Email
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                                <i class="fa fa-envelope"></i>
-                                                            </span>
-                                                        <input type="text" class="form-control input-height" name="email" value="test@example.com" placeholder="Email Address"> </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Password
+                                                <label class="control-label col-md-3">Qualification
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="password" name="pswd" data-required="1" placeholder="enter Password" class="form-control input-height" /> </div>
+                                                    <input type="text" name="designation" data-required="1"  class="form-control input-height" /> </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Confirm Password
+											
+											<div class="form-group row">
+                                                <label class="control-label col-md-3">Specialization
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="cnfmPwd" data-required="1" placeholder="Reenter your password" class="form-control input-height" /> </div>
+                                                    <input type="text" name="designation" data-required="1"  class="form-control input-height" /> </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Designation
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input type="text" name="designation" data-required="1" placeholder="enter your designation" value="Physician" class="form-control input-height" /> </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Departments
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <select class="form-control input-height" name="department">
-                                                        <option value="">Select...</option>
-                                                        <option value="Category 1">Neurology</option>
-                                                        <option selected="selected" value="Category 2">Orthopedics</option>
-                                                        <option value="Category 3">Gynaecology</option>
-                                                        <option value="Category 3">Microbiology</option>
-                                                        <option value="Category 3">Radiotherapy</option>
-                                                        <option value="Category 3">Pharmacy</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Gender
                                                     <span class="required"> * </span>
@@ -130,13 +111,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Mobile No.
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input name="number" type="text" placeholder="mobile number" value="1234567890" class="form-control input-height" /> </div>
-                                            </div>
+                                            
                                                <div class="form-group row">
                                                 <label class="control-label col-md-3">Date Of Birth
                                                     <span class="required"> * </span>
@@ -150,48 +125,66 @@
                                                 </div>
                                             </div>
                                         	 <div class="form-group row">
-                                                <label class="control-label col-md-3">Address
+                                                <label class="control-label col-md-3">Street
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <textarea name="address" placeholder="address" class="form-control-textarea" rows="5" >23, Sagar Appartment, Near Nationl Bank</textarea>
+                                                    <textarea name="address"  class="form-control-textarea" rows="5" ></textarea>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Profile Picture
+											
+											<div class="form-group row">
+                                                <label class="control-label col-md-3">City
+                                                    <span class="required"> * </span>
                                                 </label>
-                                                <div class="compose-editor">
-                                                  <input type="file" class="default" multiple>
-                                              </div>
+                                                <div class="col-md-5">
+                                                    <select class="form-control input-height" name="city">
+                                                        <option value="">Select...</option>
+                                                        <option value="Category 1">Surat</option>
+                                                        <option value="Category 2">Vadodara</option>
+                                                        <option value="Category 3">Ahmedabad</option>
+                                                        <option value="Category 4">Mumbai</option>
+                                                        <option value="Category 5">Chennai</option>
+                                                        <option value="Category 6">Gandhinagar</option>
+                                                    </select>
+                                                </div>
                                             </div>
+											
 											<div class="form-group row">
-												<label class="control-label col-md-3">Education 
-												</label>
-												<div class="col-md-5">
-													<textarea name="address" class="form-control-textarea" placeholder="Education" rows="5">M.B.B.S, M.S.</textarea>
-												</div>
-											</div>
+                                                <label class="control-label col-md-3">State
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <select class="form-control input-height" name="state">
+                                                        <option value="">Select...</option>
+                                                        <option value="Category 1">Gujarat</option>
+                                                        <option value="Category 2">Maharashtra</option>
+                                                        <option value="Category 3">Tamil Nadu</option>
+                                                        <option value="Category 4">Andhra Pradesh</option>
+                                                        <option value="Category 5">Punjab</option>
+                                                        <option value="Category 6">Goa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+											
 											<div class="form-group row">
-												<label class="control-label col-md-3">Experience
-												</label>
-												<div class="col-md-5">
-													<textarea name="address" class="form-control-textarea" placeholder="Education" rows="10">M.B.B.S, M.S.</textarea>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="control-label col-md-3">Conferences,Courses & Workshops Attended
-												</label>
-												<div class="col-md-5">
-													<textarea name="address" class="form-control-textarea" placeholder="Education" rows="5">M.B.B.S, M.S.</textarea>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="control-label col-md-3">Professional Affilations 
-												</label>
-												<div class="col-md-5">
-													<textarea name="address" class="form-control-textarea" placeholder="Education" rows="5">M.B.B.S, M.S.</textarea>
-												</div>
-											</div>
+                                                <label class="control-label col-md-3">Country
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <select class="form-control input-height" name="country">
+                                                        <option value="">Select...</option>
+                                                        <option value="Category 1">India</option>
+                                                        <option value="Category 2">U.S</option>
+                                                        <option value="Category 3">U.K</option>
+                                                        <option value="Category 4">Australia</option>
+                                                        <option value="Category 5">New Zealand</option>
+                                                        <option value="Category 6">West Indies</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+											
 										</div>
                                         <div class="form-actions">
                                             <div class="row">
@@ -208,13 +201,27 @@
                     </div>
                 </div>
             </div>
+            <!-- end page content -->
 			
-			<!-- Loading script files -->
+   
+    </div>	
+    
+<!-- Loading script files -->
+<script src="js/jquery.min.js" ></script>
 <script src="js/jquery.blockui.min.js" ></script>
 <script src="js/jquery.slimscroll.js" ></script>
+<script src="js/popper/popper.js" ></script>
+<script src="js/jquery-validation/js/jquery.validate.min.js" ></script>
+ <script src="js/jquery-validation/js/additional-methods.min.js" ></script>
 
+<!--Bootstrap -->
+<script src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch/js/bootstrap-switch.min.js" ></script>
+	<script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"  charset="UTF-8"></script>
+    <script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker-init.js"  charset="UTF-8"></script>
 <!-- Common js-->
-<script src="js/app.js" ></script>
+<script src="js/app.js" ></script>	
+<script src="js/form-validation.js" ></script>
 <script src="js/layout.js" ></script>
 <script src="js/theme-color.js" ></script>
 
@@ -231,9 +238,11 @@
 
 <script src="js/dropzone/dropzone.js" ></script>
 <script src="js/dropzone/dropzone-call.js" ></script>
-			{% endblock%}
-			 
-			           
-			<!-- end page content -->
 
-        
+
+{% endblock%}
+			
+                <!-- end page content -->
+
+			
+			
