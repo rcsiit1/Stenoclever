@@ -1,7 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 
-			<!-- start page content -->
-			{% block content %}
-			<!-- google font, tether, bootstrap, jquery and other files-->
+
+    <!-- google font, tether, bootstrap, jquery and other files-->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
 	<script src="js/jquery.min.js" ></script>
 	<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -14,6 +15,9 @@
 	<link href="js/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
     <link href="js/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
     <link href="js/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+	<!-- data tables -->
+    <link href="js/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+	
     <!-- theme style -->
    <link href="css/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
    <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -26,8 +30,10 @@
    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <!-- favicon -->
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
-			
-<div class="page-content-wrapper">
+
+
+			<!-- start page content -->
+            <div class="page-content-wrapper">
                 <div class="page-content">
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
@@ -40,9 +46,7 @@
                     <div class="row">
 	                    <div class="col-md-4 col-xs-12">
 	                        <div class="white-box">
-								<div class=" cardbox patient-profile">
-									<img src="img/patient1.jpg" class="img-responsive" alt="">
-								</div>
+								
 								<div class="cardbox">
 			                    <div class="header">
 			                        <h4 class="font-bold">ABOUT PATIENT</h4>
@@ -87,11 +91,8 @@
                             <div class="cardbox">
 			                    <div class="body"> 
                                     <div class="mypost-list">
-                                        <div class="post-box">
-                                            <p>It is also used to identify any abnormal tissue in the uterine cavity, such as uterine fibroids, endometrial polyps, scar tissue, or retained pregnancy tissue, the presence of which may be suggested by history or previous tests such as a hysterosalpingogram (x-ray of the uterus and tubes). This procedure is done in the office here at IVF New England, and is done by one of the physicians.  </p>
-                                            <p>Approximately an hour before the exam we suggest that you take Ibuprofen 600 mg (Motrin/Advil) or a similar medication to minimize some mild to moderate cramping that you may experience during the procedure. </p>
-                                        </div>
-                                        <hr>
+                                        
+                                        
                                         <div class="post-box">
                                             <h4 class="font-bold">General Report</h4>                                        
                                             <hr>
@@ -114,117 +115,94 @@
                                         </div>
                                         </div>
                                         <hr>
-                                        <div class="row">
-					                        <div class="col-md-12">
-					                            <div class="row">
-					                                <div class="col-md-12">
-					                                    <div class="card card-topline-purple">
-					                                        <div class="card-head">
-					                                            <header>Past Visit History</header>
-					                                        </div>
-					                                        <div class="card-body ">
-					                                        	<div class="table-responsive">
-					                                            <table class="table table-striped custom-table table-hover">
-					                                                <thead>
-					                                                    <tr>
-					                                                        <th>Date</th>
-					                                                        <th>Doctor</th>
-					                                                        <th>Treatment</th>
-					                                                        <th>Chart</th>
-					                                                        <th>Charges($)</th>
-					                                                        <th>Action</th>
-					                                                    </tr>
-					                                                </thead>
-					                                                <tbody>
-					                                                    <tr>
-					                                                        <td>11/05/2017</td>
-					                                                        <td>Dr.Rajesh</td>
-					                                                        <td>Check up</td>
-					                                                        <td><div id="sparkline"></div></td>
-					                                                        <td>14$</td>
-					                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit">
-					                                                        	<i class="fa fa-check"></i></a> 
-					                                                        	<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-					                                                        	<i class="fa fa-trash"></i></a>
-					                                                        </td>
-					                                                    </tr>
-					                                                    <tr>
-					                                                        <td>13/05/2017</td>
-					                                                        <td>Dr.Rajesh</td>
-					                                                        <td>X-Ray</td>
-					                                                        <td><div id="sparkline3"></div></td>
-					                                                        <td>16$</td>
-					                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit">
-					                                                        	<i class="fa fa-check"></i></a> 
-					                                                        	<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-					                                                        	<i class="fa fa-trash"></i></a>
-					                                                        </td>
-					                                                    </tr>
-					                                                    <tr>
-					                                                        <td>13/05/2017</td>
-					                                                        <td>Dr.Rajesh</td>
-					                                                        <td>Blood Test</td>
-					                                                        <td><div id="sparkline1"></div></td>
-					                                                        <td>24$</td>
-					                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit">
-					                                                        	<i class="fa fa-check"></i></a> 
-					                                                        	<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-					                                                        	<i class="fa fa-trash"></i></a>
-					                                                        </td>
-					                                                    </tr>
-					                                                    <tr>
-					                                                        <td>14/05/2017</td>
-					                                                        <td>Dr.Rajesh</td>
-					                                                        <td>Admit</td>
-					                                                        <td><div id="sparkline2"></div></td>
-					                                                        <td>14$</td>
-					                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit">
-					                                                        	<i class="fa fa-check"></i></a> 
-					                                                        	<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-					                                                        	<i class="fa fa-trash"></i></a>
-					                                                        </td>
-					                                                    </tr>
-					                                                    <tr>
-					                                                        <td>15/05/2017</td>
-					                                                        <td>Dr.Rajesh</td>
-					                                                        <td>Operation</td>
-					                                                        <td><div id="sparkline4"></div></td>
-					                                                        <td>14$</td>
-					                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit">
-					                                                        	<i class="fa fa-check"></i></a> 
-					                                                        	<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-					                                                        	<i class="fa fa-trash"></i></a>
-					                                                        </td>
-					                                                    </tr>
-					                                                    <tr>
-					                                                        <td>18/05/2017</td>
-					                                                        <td>Dr.Rajesh</td>
-					                                                        <td>Discharge</td>
-					                                                        <td><div id="sparkline5"></div></td>
-					                                                        <td>14$</td>
-					                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit">
-					                                                        	<i class="fa fa-check"></i></a> 
-					                                                        	<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-					                                                        	<i class="fa fa-trash"></i></a>
-					                                                        </td>
-					                                                    </tr>
-					                                                </tbody>
-					                                            </table>
-					                                            </div>
-					                                        </div>
-					                                    </div>
-					                                </div>
-					                            </div>
-					                        </div>
-					                    </div>
-                                     <hr>
+                                        
+										<!--table-->
+										<div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-topline-red">
+                                <div class="card-head">
+                                    <header>PATIENT TABLE</header>
                                     
-			                    </div>
-			                </div>
-	                    </div>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="row">
+                       
+                                        
+                                    </div>
+                                    <table class="table table-striped table-bordered table-hover table-checkable order-column" style="width: 100%" id="example4">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <th> Case_id </th>
+                                                <th> Disease Name </th>
+                                                
+                                                <th> View Medicine </th>
+                                                <th> Report </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                                <td>
+                                                    <label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+                                                        <input type="checkbox" class="checkboxes" value="1" />
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td> 1 </td>
+                                                <td>
+                                                    <a style="text-align:center">Malaria </a>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-sm label-success"> MAlARIA </span>
+                                                </td>
+                                                <td class="valigntop"><div class="btn-group">
+                                                        <button type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add </button>
+                                                        
+                                                    </div></td>
+                                                
+                                                    
+                                               
+                                            </tr>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-				<!-- Loading script files -->
+            </div>
+			
+			<!--table-->
+										
+					                    
+					                </div>
+	                        	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- end chat sidebar -->
+            </div>
+            <!-- end page container -->
+            
+        <!-- Loading script files -->
 <script src="js/jquery.blockui.min.js" ></script>
 <script src="js/jquery.slimscroll.js" ></script>
 
@@ -232,6 +210,11 @@
 <script src="js/app.js" ></script>
 <script src="js/layout.js" ></script>
 <script src="js/theme-color.js" ></script>
+
+<!-- data tables -->
+    <script src="js/datatables/jquery.dataTables.min.js" ></script>
+ 	<script src="js/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js" ></script>
+    <script src="js/table_data.js" ></script>
 
 <!-- Material -->
 <script src="js/material/material.min.js" ></script>
@@ -241,12 +224,12 @@
 <script src="js/material-datetimepicker/datetimepicker.js" ></script>
 <script src="js/select2/js/select2.js" ></script>
 <script src="js/select2/js/select2-init.js" ></script>
+<script src="js/float/ecg-data.js" ></script>
+<script src="js/float/jquery.flot.js" ></script>
+<script src="js/float/jquery.flot.resize.min.js" ></script>
 
 <!-- dropzone -->
 
 <script src="js/dropzone/dropzone.js" ></script>
 <script src="js/dropzone/dropzone-call.js" ></script>
-				
-				{% endblock%}
-                <!-- end page content -->
-				
+
